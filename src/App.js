@@ -14,32 +14,41 @@ function App() {
   }, [query]);
 
   const getRecipes = async () => {
-    const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+    const response = await fetch(
+      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+    );
     const data = await response.json();
     setRecipes(data.hits);
-  }
+  };
 
   const updateSearch = e => {
     setSearch(e.target.value);
     console.log(search);
-  }
+  };
 
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
     setSearch('');
-  }
+  };
 
   return (
-    <div className="App">
-      <form className="search-form" onSubmit={getSearch}>
-        <input type="text" className="search-bar" value={search} onChange={updateSearch} />
-        <button type="submit" className="search-button">Search</button>
+    <div className='App'>
+      <form className='search-form' onSubmit={getSearch}>
+        <input
+          type='text'
+          className='search-bar'
+          value={search}
+          onChange={updateSearch}
+        />
+        <button type='submit' className='search-button'>
+          Search
+        </button>
       </form>
-      <div className="recipes">
+      <div className='recipes'>
         {recipes.map(recipe => (
           <Recipe
-            key={recipe.recipe.label}
+            key={Math.random() * 1000}
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
