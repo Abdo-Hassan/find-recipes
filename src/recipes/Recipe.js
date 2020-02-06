@@ -13,11 +13,16 @@ const Recipe = ({ title, calories, image, ingredients }) => {
 
   return (
     <Fragment>
-      <div className='card' style={{ marginBottom: 10, borderRadius: 5 }}>
+      <div
+        className='card main-card'
+        style={{ marginBottom: 10, borderRadius: 5 }}
+      >
         <img src={image} alt='recipe' />
         <div className='card-body'>
           <h5 className='card-title title font-weight-bold'>{title}</h5>
-          <p className='card-title font-weight-bold'>Ingredients : </p>
+          <p className='card-title font-weight-bold text-center'>
+            Ingredients :{' '}
+          </p>
           <ol
             className={ingredients.length > 3 ? showMore : 'normal-ingredients'}
           >
@@ -35,7 +40,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
               {showMoreText ? 'Show More' : 'Show Less'}
             </button>
           )}
-          <p style={{ fontWeight: 'bold' }} className='card-text'>
+          <p style={{ fontWeight: 'bold' }} className='card-text text-center'>
             Calories : {Math.ceil(calories)} Calorie 🔥
           </p>
         </div>

@@ -7,6 +7,7 @@
 .title {
   font-family: 'Merienda', cursive;
   color: #b378d2;
+  text-align: center;
 }
 
 .search-form {
@@ -51,6 +52,10 @@
   height: 50px;
 }
 
+.main-card {
+  border: 1px solid #b378d2;
+}
+
 .recipe-container {
   border-radius: 5px;
   box-shadow: 0px 1px 6px 1px rgb(71, 71, 71);
@@ -76,7 +81,6 @@
 
 .lottie {
   width: 350px;
-  height: 350px;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -86,6 +90,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .lottie {
+    width: 200px;
+  }
+
   .main-title {
     font-size: 40px;
   }
