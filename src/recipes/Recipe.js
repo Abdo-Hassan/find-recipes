@@ -2,7 +2,6 @@ import React, { useState, Fragment } from 'react';
 const Recipe = ({ title, calories, image, ingredients }) => {
   const [showMore, setShowMore] = useState('hide-ingredients');
   const [showMoreText, setShowMoreText] = useState(true);
-  console.log(ingredients);
   const handleClick = () => {
     setShowMore('show-ingredients');
     setShowMoreText(!showMoreText);

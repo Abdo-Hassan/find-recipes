@@ -52,10 +52,6 @@
   height: 50px;
 }
 
-.main-card {
-  border: 1px solid #b378d2;
-}
-
 .recipe-container {
   border-radius: 5px;
   box-shadow: 0px 1px 6px 1px rgb(71, 71, 71);
@@ -109,5 +105,9 @@
 
   .main-recipe {
     padding: 0 6px;
+  }
+
+  .main-card {
+    border: 1px solid #b378d2;
   }
 }
